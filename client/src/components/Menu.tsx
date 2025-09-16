@@ -38,9 +38,7 @@ export default function Menu() {
         {
           name: "Antipasto Completo",
           description: "Selezione completa di salumi, formaggi, bruschette, verdure sott'olio e altre specialità locali",
-          price: "€48",
-          image: antipastiImage,
-          featured: true
+          price: "€48"
         },
         {
           name: "Tagliere di Salumi e Formaggi",
@@ -95,9 +93,7 @@ export default function Menu() {
         {
           name: "Taglio Iberico",
           description: "Il nostro fiore all'occhiello - carne iberica di altissima qualità, cotta alla perfezione",
-          price: "€45",
-          image: steakImage,
-          featured: true
+          price: "€45"
         },
         {
           name: "Chianina al Rosmarino",
