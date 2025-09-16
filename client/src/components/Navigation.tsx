@@ -1,19 +1,25 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+// 🖼️ LOGO: Sostituisci questo percorso per cambiare il logo del ristorante
 import logoImage from "@assets/424674859_1148634889826884_8224997341038095058_n_1758028283916.jpg";
 
 export default function Navigation() {
+  // 📱 STATO: Gestisce se la barra di navigazione è trasparente o opaca
   const [isScrolled, setIsScrolled] = useState(false);
+  // 📱 STATO: Gestisce se il menu mobile è aperto o chiuso
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // 🎯 EFFETTO: Cambia l'aspetto della barra quando si scrolla
   useEffect(() => {
     const handleScroll = () => {
+      // ⚙️ CONFIGURAZIONE: Cambia "50" per modificare quando la barra diventa opaca
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // 🎯 FUNZIONE: Scrolla automaticamente alla sezione cliccata
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -23,6 +29,9 @@ export default function Navigation() {
     console.log(`Navigating to ${sectionId}`);
   };
 
+  // 📋 MENU: Lista delle sezioni della navigazione
+  // 🔧 MODIFICA: Cambia "label" per modificare i testi del menu
+  // 🔧 MODIFICA: Cambia "id" per puntare a sezioni diverse (deve corrispondere agli id nelle sezioni)
   const navItems = [
     { id: "home", label: "Home" },
     { id: "chi-siamo", label: "Chi siamo" },

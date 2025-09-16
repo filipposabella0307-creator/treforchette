@@ -4,19 +4,23 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Facebook, Instagram, Mail } from "lucide-react";
 
 export default function Contact() {
+  // 📞 INFORMAZIONI CONTATTO: Modifica queste informazioni con i tuoi dati reali
+  // 🔧 MODIFICA: Sostituisci tutti questi valori con le informazioni del tuo ristorante
   const contactInfo = {
-    address: "Via G. Galliano, 87, 63822 Porto San Giorgio (FM)",
-    phone: "+39 346 611 7936",
-    altPhone: "+39 0734 015961",
-    email: "letreforchettetrattoria@gmail.com",
-    facebook: "@letreforchette.trattoria",
-    instagram: "@letreforchettetrattoria"
+    address: "Via G. Galliano, 87, 63822 Porto San Giorgio (FM)", // 🏠 INDIRIZZO: Il tuo indirizzo completo
+    phone: "+39 346 611 7936",                                    // 📱 CELLULARE: Numero di cellulare principale
+    altPhone: "+39 0734 015961",                                  // ☎️ FISSO: Numero di telefono fisso (opzionale)
+    email: "letreforchettetrattoria@gmail.com",                   // 📧 EMAIL: Indirizzo email del ristorante
+    facebook: "@letreforchette.trattoria",                        // 📘 FACEBOOK: Handle Facebook (con @)
+    instagram: "@letreforchettetrattoria"                         // 📸 INSTAGRAM: Handle Instagram (con @)
   };
 
+  // ⏰ ORARI DI APERTURA: Modifica questi orari con i tuoi orari reali
+  // 🔧 MODIFICA: Cambia "day" per i giorni e "hours" per gli orari
   const openingHours = [
-    { day: "Lunedì - Venerdì", hours: "18:30 - 23:00" },
-    { day: "Sabato", hours: "19:30 - 23:00" },
-    { day: "Domenica", hours: "18:30 - 23:00" }
+    { day: "Lunedì - Venerdì", hours: "18:30 - 23:00" }, // 📅 GIORNI FERIALI: Orari dei giorni lavorativi
+    { day: "Sabato", hours: "19:30 - 23:00" },           // 📅 SABATO: Orari del sabato
+    { day: "Domenica", hours: "18:30 - 23:00" }          // 📅 DOMENICA: Orari della domenica
   ];
 
   const handleCall = (phone: string) => {

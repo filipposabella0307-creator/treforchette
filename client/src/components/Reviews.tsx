@@ -4,7 +4,14 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Star, Quote } from "lucide-react";
 
 export default function Reviews() {
-  // todo: remove mock functionality - authentic reviews from Google Maps/Facebook
+  // 📝 RECENSIONI DEL RISTORANTE: Sostituisci queste recensioni con quelle reali del tuo ristorante
+  // 🔧 MODIFICA: Per ogni recensione puoi cambiare:
+  //   - name: Nome del cliente
+  //   - rating: Valutazione da 1 a 5 stelle
+  //   - date: Data della recensione
+  //   - review: Testo della recensione
+  //   - platform: Piattaforma (Google, Facebook, TripAdvisor, etc.)
+  //   - verified: true/false se è verificata
   const reviews = [
     {
       name: "Cristian D'Introno",
@@ -71,8 +78,10 @@ export default function Reviews() {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
 
+  // 🧮 CALCOLO AUTOMATICO: La media delle recensioni viene calcolata automaticamente
   const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
-  const totalReviews = 337; // From authentic Google data
+  // 📊 NUMERO TOTALE RECENSIONI: Cambia questo numero con il totale reale delle tue recensioni
+  const totalReviews = 337; // 🔧 MODIFICA: Sostituisci con il numero reale delle recensioni
 
   return (
     <section id="recensioni" className="py-16 bg-background" data-testid="reviews-section">

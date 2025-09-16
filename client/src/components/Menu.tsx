@@ -2,31 +2,38 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChefHat, Beef, Salad, Wine } from "lucide-react";
+// 🖼️ IMMAGINI PIATTI: Sostituisci questi percorsi per cambiare le immagini del menu
 import steakImage from "@assets/generated_images/Chianina_beef_steak_dish_7018e85f.png";
 import antipastiImage from "@assets/generated_images/Italian_antipasti_platter_3bf945d9.png";
 
 export default function Menu() {
-  // todo: remove mock functionality - authentic menu from restaurant
+  // 📝 STRUTTURA MENU: Queste interfacce definiscono la struttura dei piatti
   interface MenuItem {
-    name: string;
-    description: string;
-    price: string;
-    image?: string;
-    featured?: boolean;
+    name: string;          // 🏷️ Nome del piatto
+    description: string;   // 📝 Descrizione del piatto
+    price: string;         // 💰 Prezzo del piatto (es: "€25")
+    image?: string;        // 🖼️ Immagine del piatto (opzionale)
+    featured?: boolean;    // ⭐ Piatto speciale/in evidenza (opzionale)
   }
 
   interface MenuCategory {
-    icon: any;
-    title: string;
-    description: string;
-    items: MenuItem[];
+    icon: any;            // 🎨 Icona della categoria (da lucide-react)
+    title: string;        // 🏷️ Nome della categoria
+    description: string;  // 📝 Descrizione della categoria
+    items: MenuItem[];    // 📋 Lista dei piatti della categoria
   }
 
+  // 🍽️ CATEGORIE MENU: Modifica queste categorie per personalizzare il tuo menu
+  // 🔧 MODIFICA: Per ogni categoria puoi cambiare:
+  //   - icon: Icona da lucide-react (Salad, ChefHat, Beef, Wine, etc.)
+  //   - title: Nome della categoria
+  //   - description: Descrizione della categoria
+  //   - items: Array dei piatti (vedi sotto)
   const menuCategories: Record<string, MenuCategory> = {
     antipasti: {
-      icon: Salad,
-      title: "Antipasti",
-      description: "Selezione di antipasti della tradizione marchigiana",
+      icon: Salad,        // 🥗 ICONA: Cambia per rappresentare la categoria
+      title: "Antipasti", // 🏷️ NOME CATEGORIA: Modifica il nome
+      description: "Selezione di antipasti della tradizione marchigiana", // 📝 DESCRIZIONE: Descrivi la categoria
       items: [
         {
           name: "Antipasto Completo",

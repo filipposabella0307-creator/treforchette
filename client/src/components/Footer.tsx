@@ -1,7 +1,9 @@
 import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
+// 🖼️ LOGO FOOTER: Sostituisci questo percorso per cambiare il logo nel footer
 import logoImage from "@assets/424674859_1148634889826884_8224997341038095058_n_1758028283916.jpg";
 
 export default function Footer() {
+  // 📅 ANNO CORRENTE: Viene calcolato automaticamente per il copyright
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -41,6 +43,7 @@ export default function Footer() {
                 <p className="font-script text-sm opacity-90">Trattoria Tradizionale</p>
               </div>
             </div>
+            {/* 📝 DESCRIZIONE FOOTER: Modifica questo testo per cambiare la descrizione nel footer */}
             <p className="text-sm opacity-90 leading-relaxed mb-4">
               La Trattoria "Le Tre Forchette" è l'idea di un luogo informale dove 
               le uniche cose che contano sono il buon cibo e la buona compagnia. 

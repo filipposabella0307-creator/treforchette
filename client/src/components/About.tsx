@@ -3,26 +3,28 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Heart, Users, Award } from "lucide-react";
 
 export default function About() {
+  // 🏆 CARATTERISTICHE DEL RISTORANTE: Modifica questi elementi per cambiare le card delle caratteristiche
+  // 🔧 MODIFICA: Cambia "title" per il titolo, "description" per il testo, "icon" per l'icona
   const features = [
     {
-      icon: Heart,
-      title: "Tradizione Familiare",
-      description: "Un ambiente informale dove le uniche cose che contano sono il buon cibo e la buona compagnia"
+      icon: Heart, // ❤️ ICONA: Importa da "lucide-react" per cambiare icona
+      title: "Tradizione Familiare", // 🏷️ TITOLO: Cambia questo testo
+      description: "Un ambiente informale dove le uniche cose che contano sono il buon cibo e la buona compagnia" // 📝 DESCRIZIONE: Modifica questa descrizione
     },
     {
-      icon: Award,
-      title: "Cucina Marchigiana",
-      description: "Specialità regionali preparate con ingredienti freschi e di alta qualità del territorio"
+      icon: Award, // 🏆 ICONA: Cambia per un'altra icona da lucide-react
+      title: "Cucina Marchigiana", // 🏷️ TITOLO: Sostituisci con il tipo di cucina
+      description: "Specialità regionali preparate con ingredienti freschi e di alta qualità del territorio" // 📝 DESCRIZIONE: Descrivi la tua cucina
     },
     {
-      icon: Users,
-      title: "Atmosfera Accogliente",
-      description: "Locale rinnovato e accogliente, perfetto per cene in famiglia e tra amici"
+      icon: Users, // 👥 ICONA: Cambia per rappresentare l'atmosfera
+      title: "Atmosfera Accogliente", // 🏷️ TITOLO: Descrivi l'ambiente del ristorante
+      description: "Locale rinnovato e accogliente, perfetto per cene in famiglia e tra amici" // 📝 DESCRIZIONE: Parla dell'ambiente
     },
     {
-      icon: Star,
-      title: "Porzioni Generose",
-      description: "Riconosciuti per le nostre porzioni abbondanti e la qualità dei nostri piatti"
+      icon: Star, // ⭐ ICONA: Rappresenta la qualità
+      title: "Porzioni Generose", // 🏷️ TITOLO: I tuoi punti di forza
+      description: "Riconosciuti per le nostre porzioni abbondanti e la qualità dei nostri piatti" // 📝 DESCRIZIONE: Cosa ti rende speciale
     }
   ];
 
@@ -33,9 +35,11 @@ export default function About() {
           <Badge variant="secondary" className="mb-4" data-testid="about-badge">
             Chi siamo
           </Badge>
+          {/* 🏷️ TITOLO SEZIONE: Cambia "La Nostra Storia" per modificare il titolo */}
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6" data-testid="about-title">
             La Nostra Storia
           </h2>
+          {/* 📝 DESCRIZIONE SEZIONE: Modifica questo testo per cambiare la descrizione principale */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="about-description">
             La Trattoria "Le Tre Forchette" è l'idea di un luogo informale dove 
             le uniche cose che contano sono il buon cibo e la buona compagnia.
@@ -57,16 +61,20 @@ export default function About() {
               iberico e la Chianina, preparati con maestria e serviti in porzioni generose che 
               soddisfano anche i palati più esigenti.
             </p>
+            {/* 📊 STATISTICHE DEL RISTORANTE: Modifica questi numeri con le tue statistiche reali */}
             <div className="flex items-center space-x-4 pt-4">
               <div className="text-center">
+                {/* 👥 NUMERO FAN FACEBOOK: Sostituisci con il tuo numero reale */}
                 <div className="font-bold text-2xl text-primary">2.350+</div>
                 <div className="text-sm text-muted-foreground">Fan su Facebook</div>
               </div>
               <div className="text-center">
+                {/* ⭐ RATING GOOGLE: Inserisci il tuo rating reale */}
                 <div className="font-bold text-2xl text-primary">4.5</div>
                 <div className="text-sm text-muted-foreground">Rating Google</div>
               </div>
               <div className="text-center">
+                {/* 📅 ANNI ESPERIENZA: Modifica con i tuoi anni di attività */}
                 <div className="font-bold text-2xl text-primary">10+</div>
                 <div className="text-sm text-muted-foreground">Anni di esperienza</div>
               </div>
